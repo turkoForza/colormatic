@@ -10,4 +10,4 @@ HTML5
 
 <img src="screen.gif">
 
-<p>Click <a href="#">here</a> to live site !</p>
+<p>Click <a href="https://stellar-rabanadas-f32e61.netlify.app">here</a> to live site !</p>
