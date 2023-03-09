@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+    background-image: linear-gradient(to right top, #ff9671, #ffa553, #f6bb31, #d9d306, #a8eb12);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+ul{
+    position: fixed;
+    top: -3rem;
+    background-image: linear-gradient(to right top, #145d83, #007091, #00849b, #0097a1, #2faaa4);
+    color: white;
+    padding: 1rem;
+    width: 80%;
+    height: 3.5rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-bottom-left-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
+    z-index: 1000;
+}
+
+li{
+    display: none;
+}
+
+.active{
+    display: block !important;
+}
+
+.open{
+    top: 0 !important;
+    height: auto;
+}
+
+.fa-angles-down{
+    position: absolute;
+    bottom: -2rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #007091;
+}
+
+#main-container{
+    background-color: azure;
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+#color-container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 2rem;
+}
+
+.color{
+    
+    border-radius: 0.5rem;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    height: 115px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.color:hover{
+    scale: 1.1;
+    transition: 0.5s;
+}
+
+#refresh-btn{
+    width: 10rem;
+    height: 3rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+}
+
+#refresh-btn:hover{
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.color-code{
+    position: absolute;
+    bottom: -20%;
+    left: 50%;
+    transform: translate(-50%,0);
+    text-transform: uppercase;
+}
+
+.tick{
+    height: 50%;
+}
+
+@media (max-width:768px) {
+    #color-container{
+        grid-template-columns: repeat(2,1fr);
+        overflow-y: scroll;
+    }
+}
